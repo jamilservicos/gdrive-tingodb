@@ -1,0 +1,30 @@
+{
+  "name": "gdrive-tingodb",
+  "version": "1.0.0",
+  "description": "Simple user TingoDB and Gdrive with create your date base on google side.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8clever/gdrive-tingodb.git"
+  },
+  "keywords": [
+    "gdrive",
+    "tingodb"
+  ],
+  "author": "Ivan Vityaev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8clever/gdrive-tingodb/issues"
+  },
+  "homepage": "https://github.com/8clever/gdrive-tingodb#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "google-drive-util": "0.0.2",
+    "googleapis": "^12.4.0",
+    "lodash": "^4.15.0",
+    "safe": "^0.4.1"
+  }
+}
