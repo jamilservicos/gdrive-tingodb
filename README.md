@@ -4,9 +4,8 @@ Wrapper for tingodb and gdrive for fast and simply use on projects
 
 # First 
 
-You should auth your project with google through google-drive-util\n
-Create google.conf in root of your project
-
+You should auth your project with google through google-drive-util. Create google.conf in root of your project
+```
 {
   "CLIENT_ID" : "your client ID",
   "CLIENT_SECRET" : "your cecret",
@@ -15,30 +14,31 @@ Create google.conf in root of your project
   "SCOPE" : "https://www.googleapis.com/auth/drive",
   "REDIRECT_URL" : "urn:ietf:wg:oauth:2.0:oob"
 }
-
+```
 # Second 
 
-You should create googleapi token\n
+You should create googleapi token
+```
 node node_modules/google-drive-util/example/generate_token.js
-
+```
 # For use
-
-var GDrive = require("gdrive-tingodb")\n
-var gDrive = new Gdrive({\n
-    dbPath: "/path/to/your/db",\n
-    dbGoogle: "ID Folder in Google Drive"\n
-})\n
-
-Used for Uplaod/Download collections on start app\n
-
-gDrive.upDownCols()\n
-    .then(() => {\n
-        console.log("done")\n
+```
+var GDrive = require("gdrive-tingodb")
+var gDrive = new Gdrive({
+    dbPath: "/path/to/your/db",
+    dbGoogle: "ID Folder in Google Drive"
+})
+```
+Used for Uplaod/Download collections on start app
+```
+gDrive.upDownCols()
+    .then(() => {
+        console.log("done")
     })
-
-For update your collections with google drive use sync\n
-
-gDrive.sync()\n
+```
+For update your collections with google drive use sync
+```
+gDrive.sync()
 console.log("done");
-
+```
 
