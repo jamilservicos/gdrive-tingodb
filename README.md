@@ -1,9 +1,11 @@
 # gdrive-tingodb
 
-# Wrapper for tingodb and gdrive for fast and simply use on projects
+Wrapper for tingodb and gdrive for fast and simply use on projects
 
-# First you should auth your project with google through google-drive-util
-# Create google.conf in root of your project
+# First 
+
+You should auth your project with google through google-drive-util
+Create google.conf in root of your project
 
 {
   "CLIENT_ID" : "your client ID",
@@ -14,11 +16,12 @@
   "REDIRECT_URL" : "urn:ietf:wg:oauth:2.0:oob"
 }
 
-# Second, you should create googleapi token
+# Second 
 
+You should create googleapi token
 node node_modules/google-drive-util/example/generate_token.js
 
-# For use module
+# For use
 
 var GDrive = require("gdrive-tingodb")
 var gDrive = new Gdrive({
@@ -26,15 +29,14 @@ var gDrive = new Gdrive({
     dbGoogle: "ID Folder in Google Drive"
 })
 
-# Used for Uplaod/Download collections on start app
-# return Promise
+Used for Uplaod/Download collections on start app
 
 gDrive.upDownCols()
     .then(() => {
         console.log("done")
     })
 
-# For update your collections with google drive use sync
+For update your collections with google drive use sync
 
 gDrive.sync()
 console.log("done");
